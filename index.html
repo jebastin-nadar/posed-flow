@@ -137,19 +137,54 @@
   <div class="container is-max-desktop has-text-centered" style="margin-top: 2rem;">
     <div style="margin-bottom: 2rem;">
       <h3 class="title is-4">Pose Generation</h3>
-      <p>bla</p>
+      <video id="pose_gen" autoplay controls muted loop playsinline height="60%" width="60%" aspect-ratio="16 / 9">
+            <source src="./static/videos/pose_gen_1.mp4"
+                    type="video/mp4">
+      </video>
+      <p style="font-size: 1.25rem; font-weight: 700; line-height: 1.2;">Generation from K=0 to K=100.</p>
     </div>
     <div style="margin-bottom: 2rem;">
       <h3 class="title is-4">Pose Completion</h3>
-      <p>bla</p>
+      <p>Pose completion with occluded joints (in purple), optimization from N=0 to N=200.</p>
+      <video id="pose_comp" autoplay controls muted loop playsinline height="100%" style="display: block; width: 100%; max-width: 960px; margin: 0 auto;">
+            <source src="./static/videos/pose_comp_1.mp4"
+                    type="video/mp4">
+      </video>
+      <div style="width: 100%; max-width: 960px; margin: 0.8rem auto 0; display: flex; justify-content: center; align-items: center; gap: 9rem; font-size: 1.25rem; font-weight: 700; line-height: 1.2;">
+        <span style="text-align: center;">Ground Truth</span>
+        <span style="text-align: center;">Completed Pose</span>
+      </div>
     </div>
     <div style="margin-bottom: 2rem;">
       <h3 class="title is-4">Motion Denoising</h3>
-      <p>bla</p>
+      <video id="motion_denoise" autoplay controls muted loop playsinline height="100%" style="display: block; width: 100%; max-width: 960px; margin: 0 auto;">
+            <source src="./static/videos/motion_denoise_1.mp4"
+                    type="video/mp4">
+      </video>
+      <div style="width: 100%; max-width: 960px; margin: 0.8rem auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 1.25rem; font-weight: 700; line-height: 1.2;">
+        <span style="text-align: center; width: 33.33%;">Ground Truth</span>
+        <span style="text-align: center; width: 33.33%;">Noisy Input</span>
+        <span style="text-align: center; width: 33.33%;">Denoised Output</span>
+      </div>
     </div>
     <div>
       <h3 class="title is-4">Human Mesh Recovery</h3>
-      <p>bla</p>
+      <div style="width: 100%; max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; gap: 1.5rem;">
+        <div style="flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.0rem;">
+          <img src="./static/images/ours_00180.png" alt="From Scratch 1" style="width: 100%; height: 95%; display: block;">
+          <img src="./static/images/ours_00422_cropped.png" alt="From Scratch 2" style="width: 100%; height: 95%; display: block;">
+          <img src="./static/images/ours_00427.png" alt="From Scratch 3" style="width: 100%; height: 95%; display: block;">
+        </div>
+        <div style="flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.0rem;">
+          <img src="./static/images/ours_00682.png" alt="Init from CLIFF 1" style="width: 100%; height: 95%; display: block;">
+          <img src="./static/images/ours_00305_cropped.png" alt="Init from CLIFF 2" style="width: 100%; height: 95%; display: block;">
+          <img src="./static/images/ours_00724_cropped.png" alt="Init from CLIFF 3" style="width: 100%; height: 95%; display: block;">
+        </div>
+      </div>
+      <div style="width: 100%; max-width: 960px; margin: 0.8rem auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 1.25rem; font-weight: 700; line-height: 1.2;">
+        <span style="text-align: center; width: 50%;">From Scratch</span>
+        <span style="text-align: center; width: 50%;">Init from CLIFF</span>
+      </div>
     </div>
   </div>
 </section>
